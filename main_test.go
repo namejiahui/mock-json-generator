@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"mock-json-generator/pkg"
 	"testing"
 )
 
@@ -12,7 +13,7 @@ func TestMain(m *testing.M) {
 				"type": "string"
 		}
 	]`)
-	_, err := processJsonString(jsonData)
+	_, err := pkg.ProcessJsonString(jsonData)
 	if err != nil {
 		log.Fatal(err)
 	}
