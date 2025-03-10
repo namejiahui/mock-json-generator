@@ -1,6 +1,5 @@
 ## Quick view
-https://vercel.com/lilijhs-projects/mjr
-
+https://mjr-gamma.vercel.app/
 ## Credits
 [gofakeit](https://github.com/brianvoe/gofakeit) for mock data
 
