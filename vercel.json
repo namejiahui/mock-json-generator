@@ -1,0 +1,25 @@
+{
+    "builds": [
+        {
+            "src": "web/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "web/dist"
+            }
+        },
+        {
+            "src": "api/index.go",
+            "use": "@vercel/go"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/index.go"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/web/dist/$1"
+        }
+    ]
+}
