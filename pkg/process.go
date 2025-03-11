@@ -23,8 +23,8 @@ func ProcessJsonString(jsonData []byte) (string, error) {
 		return "", err
 	}
 	structType := reflect.StructOf(createStructFields(fields))
-	structValue := reflect.New(structType).Elem()
-	gofakeit.Struct(structValue.Addr().Interface())
+	structValue := reflect.New(structType)
+	gofakeit.Struct(structValue.Interface())
 	personJSON, err := json.MarshalIndent(structValue.Interface(), "", "  ")
 	if err != nil {
 		return "", err
